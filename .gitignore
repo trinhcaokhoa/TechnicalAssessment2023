@@ -2,3 +2,6 @@ task_01/*
 task_02/*
 task_03/*
 downloads
+config.js
+node_modules
+.env
