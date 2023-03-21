@@ -29,7 +29,7 @@ Replace YOUR_DISCORD_BOT_TOKEN with your actual Discord bot token, YOUR_GITHUB_P
 1. Invite the Discord bot to your server using the following link: `https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot` (replace YOUR_CLIENT_ID with your actual Discord bot's client ID).
 2. In your Discord server, use the command `!create task` to start the task creation process.
 3. Follow the prompts to enter the necessary information for the task (project name, assignees, title, tags, issue URL, minutes, and dependencies).
-4. Once all information is provided, the plugin will create the task on GitHub and reply with a link to the new issue.
+4. Once all information is provided, the plugin create the task on GitHub and reply with a link to the new issue.
 
 ## Docker
 
