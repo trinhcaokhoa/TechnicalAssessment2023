@@ -17,6 +17,26 @@ try {
   return;
 }
 
+// Remove the existing origin and add a new remote named "task_2"
+try {
+  execSync(`git remote remove origin`);
+  execSync(`git remote add task_2 ${templateRepoUrl}`);
+  console.log("Remote updated successfully!");
+} catch (error) {
+  console.error("Error updating remote:", error);
+  return;
+}
+
+// Add the remote repository for pushing changes
+const remoteRepoUrl = "https://github.com/trinhcaokhoa/TechnicalAssessment2023.git";
+try {
+  execSync(`git remote add origin ${remoteRepoUrl}`);
+  console.log(`Remote repository ${remoteRepoUrl} added successfully!`);
+} catch (error) {
+  console.error("Error adding remote repository:", error);
+  return;
+}
+
 // Load the package.json file from the new library
 const packageJsonPath = path.join(libraryPath, "package.json");
 let packageJson;
