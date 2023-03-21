@@ -32,8 +32,7 @@ try {
     author: "Your Name",
     description: "A brief description of your library",
     repository: {
-      type: "git",
-      url: "https://github.com/your-username/your-library.git",
+      type: "git"
     },
     dependencies: {},
   };
