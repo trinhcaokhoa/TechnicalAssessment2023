@@ -4,9 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4421e368-8e06-459d-814f-6235dab188f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_2/task_2/.obsidian/plugins/assessment-plugin" beforeDir="false" />
+    <list default="true" id="4421e368-8e06-459d-814f-6235dab188f8" name="Changes" comment="INITIAL project">
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/.npmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/esbuild.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/version-bump.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/.obsidian/plugins/assessment-plugin/versions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_2/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_2/.obsidian/plugins/github_obsidian_plugin" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_2/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_2/template/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/template/.editorconfig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +50,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TechnicalAssessment2023\task_2" />
+      <recent name="D:\TechnicalAssessment2023\task_2\template\github_obsidian_plugin" />
+      <recent name="D:\TechnicalAssessment2023\task_2\template" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,6 +66,14 @@
       <option name="presentableId" value="Default" />
       <updated>1679389100788</updated>
     </task>
+    <task id="LOCAL-00001" summary="INITIAL project">
+      <created>1679391088004</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679391088004</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -52,5 +86,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="INITIAL project" />
+    <option name="LAST_COMMIT_MESSAGE" value="INITIAL project" />
   </component>
 </project>

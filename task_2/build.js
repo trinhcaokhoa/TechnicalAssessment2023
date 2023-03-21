@@ -1,39 +1,20 @@
 const { execSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
+const { EOL } = require("os");
 
 // This is the path where the new library will be created
 const libraryPath = path.join(__dirname, ".obsidian", "plugins", "assessment-plugin");
 
-// This is the URL of the GitHub repository for the template
-const templateRepoUrl = "https://github.com/obsidianmd/obsidian-sample-plugin.git";
+// This is the path to the template directory
+const templatePath = path.join(__dirname, "template");
 
-// Clone the template repository to the new library path
+// Copy the template directory to the new library path
 try {
-  execSync(`git clone ${templateRepoUrl} ${libraryPath}`);
-  console.log("Template cloned successfully!");
+  execSync(`xcopy /E /I /Y "${templatePath}" "${libraryPath}"`);
+  console.log("Template copied successfully!");
 } catch (error) {
-  console.error("Error cloning template:", error);
-  return;
-}
-
-// Remove the existing origin and add a new remote named "task_2"
-try {
-  execSync(`git remote remove origin`);
-  execSync(`git remote add task_2 ${templateRepoUrl}`);
-  console.log("Remote updated successfully!");
-} catch (error) {
-  console.error("Error updating remote:", error);
-  return;
-}
-
-// Add the remote repository for pushing changes
-const remoteRepoUrl = "https://github.com/trinhcaokhoa/TechnicalAssessment2023.git";
-try {
-  execSync(`git remote add origin ${remoteRepoUrl}`);
-  console.log(`Remote repository ${remoteRepoUrl} added successfully!`);
-} catch (error) {
-  console.error("Error adding remote repository:", error);
+  console.error("Error copying template:", error);
   return;
 }
 
@@ -43,14 +24,31 @@ let packageJson;
 try {
   packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
 } catch (error) {
-  console.error(`Error loading package.json file from ${libraryPath}:`, error);
-  return;
+  console.warn(`Warning: package.json file not found at ${packageJsonPath}, creating new one...`);
+  packageJson = {
+    name: "my-library",
+    version: "1.0.0",
+    main: "main.js",
+    author: "Your Name",
+    description: "A brief description of your library",
+    repository: {
+      type: "git",
+      url: "https://github.com/your-username/your-library.git",
+    },
+    dependencies: {},
+  };
 }
 
-// Modify the package.json file as necessary
-packageJson.name = "my-library";
-packageJson.version = "1.0.0";
 
-// Save the modified package.json file
-fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-console.log("package.json file updated successfully!");
+
+
+
+
+// Build the library
+try {
+  execSync('npm run build', { cwd: libraryPath, stdio: "inherit" });
+  console.log("Library built successfully!");
+} catch (error) {
+  console.error("Error building library:", error);
+  return;
+}
