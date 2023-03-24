@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "3a487cd013a5ff39",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea954006525b44d5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "90d98b6ee8c6f406",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/Mebook/MebookDashBoard.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d8b1364da7a0d7db",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d6d84f054c1ea03",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21f86934b4eaf4b1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ecd487059d63f308",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "eaf3b768b41ba91f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "1eef38c5b0f7b6f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "21c1e25f0ff6c2e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3fa7909da0a6fe67",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Projects/Mebook/MebookDashBoard.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ff5c905fac0a598f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Projects/Mebook/MebookDashBoard.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b04ca05b40058333",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "498bc2f6039a21b1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Projects/Mebook/MebookDashBoard.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "templater-obsidian:Templater": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "90d98b6ee8c6f406",
+  "lastOpenFiles": [
+    "Projects/Mebook/users/__pycache__/__init__.cpython-310.pyc",
+    "Projects/Mebook/users/__pycache__/apps.cpython-310.pyc",
+    "Projects/Mebook/users/migrations/__init__.py",
+    "Projects/Mebook/users/migrations/0006_delete_mybook.py",
+    "Projects/Mebook/users/migrations/0005_auto_20220227_1057.py",
+    "Projects/Mebook/users/migrations/0004_auto_20220227_1043.py",
+    "Projects/Mebook/users/migrations/0003_auto_20220227_1040.py",
+    "Projects/Mebook/users/migrations/0002_auto_20220227_1020.py",
+    "Projects/Mebook/users/migrations/0001_initial.py",
+    "Projects/Mebook/users/__pycache__",
+    "Projects/Mebook/users/__init__.py",
+    "Projects/Mebook/MebookDashBoard.md",
+    "Projects/Mebook/static/admin/js/vendor/select2/LICENSE.md",
+    "Projects/Mebook/static/admin/css/vendor/select2/LICENSE-SELECT2.md",
+    "Projects/Mebook/static/rest_framework/docs/img/grid.png",
+    "Projects/Mebook/static/admin/img/gis/move_vertex_on.svg",
+    "Projects/Mebook/static/admin/img/gis/move_vertex_off.svg",
+    "Projects/Mebook/static/star-ratings/images/stars.png",
+    "Projects/Mebook/static/star-ratings/images/admin_stars.png",
+    "Projects/Mebook/static/rest_framework/img/grid.png",
+    "Projects/Mebook/static/rest_framework/img/glyphicons-halflings.png",
+    "Projects/Mebook/static/rest_framework/img/glyphicons-halflings-white.png",
+    "Projects/Mebook/static/rest_framework/fonts/glyphicons-halflings-regular.svg",
+    "Projects/Mebook/static/rest_framework/fonts/fontawesome-webfont.svg",
+    "Projects/Mehoo/static/admin/js/vendor/select2/LICENSE.md",
+    "Projects/Mehoo/static/admin/css/vendor/select2/LICENSE-SELECT2.md",
+    "Projects/Mebook_hub/Mebook_hubDashBoard.md",
+    "Projects/NewMebook/NewMebookDashBoard.md",
+    "Projects/Mebook____hub/Mebook____hubDashBoard.md",
+    "Projects/Test_curr/Test_currDashBoard.md",
+    "Projects/pro_test/pro_testDashBoard.md",
+    "Projects/Newapapp/NewapappDashBoard.md",
+    "Projects/undefined/undefinedDashBoard.md",
+    "Projects/New/NewDashBoard.md",
+    "template/README.md",
+    "Projects/1more/1moreDashBoard.md",
+    "Projects/again/againDashBoard.md",
+    "Projects/Testttt/TesttttDashBoard.md",
+    "Projects/NewTest/NewTestDashBoard.md",
+    "Projects/newtest/newtestDashBoard.md",
+    "Projects/NewTestDashBoard/NewTestDashBoard.md",
+    "Projects/New Project/New Project.md",
+    "Projects/Test/Test.md",
+    "Projects/Test/dashboard.md",
+    "Projects/NewPro/NewPro.md",
+    "Projects/NewPro/dashboard.md"
+  ]
+}

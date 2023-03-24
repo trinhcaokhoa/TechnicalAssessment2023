@@ -1,4 +1,4 @@
-import { App, Component, Editor, FileSystemAdapter, FileView, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting, Vault, FuzzySuggestModal, WorkspaceLeaf, FileManager, Plugin_2 } from 'obsidian';
+import { App, Component, Editor, FileSystemAdapter, FileView, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting, Vault, FuzzySuggestModal, WorkspaceLeaf, FileManager, Plugin_2,} from 'obsidian';
 import type { FuzzyMatch } from "obsidian";
 import simpleGit, { SimpleGit } from 'simple-git';
 import { exec } from 'child_process';
@@ -12,44 +12,151 @@ import { exec } from 'child_process';
 // }
 
 interface Project {
-	name: string,
-	repo: string | null,
-	wiki: string,
-	projectBoard: string | null
+  projectName: string,
+  projectRepo: string,
+  projectWiki: string,
+  projectBoard: string | null
+  projectType: 'personal' | 'professional',
 }
+
 
 export default class ProjectMan extends Plugin {
 	projects: Array<Project> = [];
 	currentProject: Project | null = null;
 
-	async onload() {
-		console.log("Loading Zenith Project Man");
-		await this.loadProjects();
+// Show a modal dialog box prompting the user to enter a project name, wiki,
+	async promptForProjectInfo(): Promise<{ name: string, repo: string | null, wiki: string, type: string }> {
+		return new Promise((resolve) => {
+			const prompt = new Modal(this.app);
+			prompt.onClose(() => {
+				resolve({ name: "", repo: null, wiki: "", type: "" });
+			});
+			prompt.titleEl.setText("Create New Project:");
+			const nameInput = prompt.contentEl.createEl("input", {
+				attr: {
+					type: "text",
+				},
+				cls: "prompt-input",
+			}) as HTMLInputElement;
+			nameInput.placeholder = "Project Name";
+			const repoInput = prompt.contentEl.createEl("input", {
+				attr: {
+					type: "text",
+				},
+				cls: "prompt-input",
+			}) as HTMLInputElement;
+			repoInput.placeholder = "Repository URL (optional)";
+			const wikiInput = prompt.contentEl.createEl("input", {
+				attr: {
+					type: "text",
+				},
+				cls: "prompt-input",
+			}) as HTMLInputElement;
+			wikiInput.placeholder = "Wiki URL or path";
+			const typeInput = prompt.contentEl.createEl("input", {
+				attr: {
+					type: "text",
+				},
+				cls: "prompt-input",
+			}) as HTMLInputElement;
+			typeInput.placeholder = "Project Type (personal/professional)";
 
-		const statusBarItemEl = this.addStatusBarItem();
-		statusBarItemEl.setText('Active Project: None');
+			const submitButton = prompt.contentEl.createEl("button", {
+				text: "Create Project",
+				cls: "mod-cta"
+			});
+			submitButton.addEventListener("click", () => {
+				resolve({
+					name: nameInput.value,
+					repo: repoInput.value ? repoInput.value : null,
+					wiki: wikiInput.value,
+					type: typeInput.value
+				});
+				prompt.close();
+			});
+			nameInput.focus();
+			prompt.open();
+		});
+	}
 
-		this.addCommand(({
-			id: 'toggle-active-project',
-			name: 'Toggle Active Project',
-			editorCallback: (editor: Editor, view: MarkdownView) => {
+		async createNewProject(project: Project) {
+			const { vault } = this.app;
+			const projectFolderPath = `Projects/${project.projectName}`;
 
-				if (this.currentProject) {
-					this.currentProject = null;
-				} else {
-					GenericSuggester.Suggest(this.app, this.projects.map((p, i, a) => p.name), this.projects.map((p, i, a) => p.name)).then(res => {
-						this.currentProject = this.projects.filter((v, i, a) => {
-							console.log(`Project: ${res}`)
-							return res && v.name === res
-						})[0]
-					});
-				}
+		  // Add the following code to retrieve the GitHub repo and wiki names from the URLs
+			const githubRepo = project.projectRepo;
+		 	const githubWiki = project.projectWiki.match(/github\.com\/([^\/]+\/[^\/]+)\/wiki\/(.+)/i)?.[2];
+			await vault.createFolder(projectFolderPath);
+			// Clone project repository if specified
+		  	if (project.projectRepo) {
+				const git: SimpleGit = simpleGit(vault.adapter.basePath);
+				const repoFolderPath = `${vault.adapter.basePath}/${projectFolderPath}`;
+				await git.cwd(repoFolderPath);
+				console.log(repoFolderPath)
+				await git.clone(project.projectRepo, repoFolderPath);
+		  	}
 
-				statusBarItemEl.setText(`Active Project: ${this.currentProject ? this.currentProject : 'None'}`);
+		  // Create and save project file with metadata and dashboard template
+			const metadataContent = `---\n project: ${project.projectName}\n repo: ${githubRepo}\n wiki: ${githubWiki}\n tags: [project,${project.projectName}] \n type: ${project.projectType} \n---`;
+			const metadataFilePath = `${projectFolderPath}/${project.projectName + 'DashBoard'}.md`;
+			await vault.create(metadataFilePath, metadataContent);
+
+			// Create tasks and wiki directories
+			await vault.createFolder(`${projectFolderPath}/tasks`);
+			await vault.createFolder(`${projectFolderPath}/wiki`);
+
+		  // Set currentProject to newly created project
+			this.currentProject = project;
+		}
+		async onload() {
+			console.log("Loading Zenith Project Man");
+			await this.loadProjects();
+
+			const statusBarItemEl = this.addStatusBarItem();
+			statusBarItemEl.setText('Active Project: None');
+
+// Create a command to add a New Project In Projects Directory
+		this.addCommand({
+			id: 'create-new-project',
+			name: 'Create New Project',
+			callback: async () => {
+				const { name, repo, wiki, type } = await this.promptForProjectInfo();
+				if (!name) return;
+
+				await this.createNewProject({ projectName: name, projectRepo: repo, projectWiki: wiki, projectBoard: null, projectType: type });
+
+				new Notice(`Project '${name}' created.`);
 			}
-		}))
+		});
 
+		this.addCommand({
+			id: 'push-changes',
+			name: 'Push Changes to GitHub',
+			callback: async () => {
+				const git: SimpleGit = simpleGit(vault.adapter.basePath);
+				const commitMessage = await this.app.vault.adapter.promisifyPrompt('Enter commit message:');
+				await git.add('.');
+				await git.commit(commitMessage);
+				await git.push();
+				new Notice('Changes pushed to remote repository.');
+		  	}
+		});
 
+		this.addCommand({
+		  id: 'toggle-active-project',
+		  name: 'Toggle Active Project',
+		  callback: async () => {
+			if (this.currentProject) {
+			  this.currentProject = null;
+			  statusBarItemEl.setText('Active Project: None');
+			} else {
+			  const projectNames = this.projects.map((p) => p.name);
+			  const chosenProjectName = await GenericSuggester.Suggest(this.app, projectNames, projectNames);
+			  this.currentProject = this.projects.find((p) => p.name === chosenProjectName);
+			  statusBarItemEl.setText(`Active Project: ${this.currentProject ? this.currentProject.name : 'None'}`);
+			}
+		  },
+		});
 		// This adds an editor command that can perform some operation on the current editor instance
 		this.addCommand({
 			id: 'clone-project-wiki',
