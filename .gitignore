@@ -5,3 +5,4 @@ downloads
 idea/*
 .env
 node_modules
+template/
