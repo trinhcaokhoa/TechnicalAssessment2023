@@ -1,7 +1,7 @@
 ---
- project: mebook
+ project: agfqf
  repo: https://github.com/trinhcaokhoa/INFOR-4102
  wiki: Homeawd
- tags: [project,mebook] 
+ tags: [project,agfqf] 
  type: personal 
 ---
