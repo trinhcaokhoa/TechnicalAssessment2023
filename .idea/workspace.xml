@@ -5,29 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4421e368-8e06-459d-814f-6235dab188f8" name="Changes" comment="INITIAL project">
-      <change afterPath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/Projects/afarf/afarfDashBoard.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/Projects/dadfqffr/dadfqffrDashBoard.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/Projects/dqaewfqf/dqaewfqfDashBoard.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/Projects/infor/inforDashBoard.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/prompt.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PluginREADME.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TaskBreakDown_Plan.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/community-plugins.json" beforeDir="false" afterPath="$PROJECT_DIR$/.obsidian/community-plugins.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/plugins/quickadd/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/plugins/quickadd/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/plugins/quickadd/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/plugins/quickadd/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/plugins/templater-obsidian/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/plugins/templater-obsidian/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obsidian/plugins/templater-obsidian/styles.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/.obsidian/workspace.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/mebook/mebookDashBoard.md" beforeDir="false" afterPath="$PROJECT_DIR$/.obsidian/plugins/assessment-plugin/Projects/agfqf/agfqfDashBoard.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

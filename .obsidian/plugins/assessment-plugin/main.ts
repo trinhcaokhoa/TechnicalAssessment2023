@@ -26,7 +26,7 @@ import { RestEndpointMethods } from "@octokit/plugin-rest-endpoint-methods";
 import { QuickAdd, TemplateSuggester } from "obsidian-quickadd";
 const path = require("path");
 const matter = require('gray-matter');
-import { promptForMilestone, promptForProjectInfo, promptForTask, createNewProject } from "prompt.ts";
+import { promptForMilestone, promptForProjectInfo, promptForTask, createNewProject} from "prompt.ts";
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -590,10 +590,36 @@ this.addCommand({
       window.setInterval(() => console.log("setInterval"), 5 * 60 * 1000)
     );
   }
+    async pushChangesToGitHub(project: Project): Promise<void> {
+		const vaultPath = this.app.vault.adapter.basePath;
+		const projectFolder = `${vaultPath}/Projects/${project.name}`;
+		const git: SimpleGit = simpleGit(projectFolder);
 
-  onunload() {
-    console.log(`Saving Projects: ${JSON.stringify(this.projects)}`);
-    this.saveProjects();
+		try {
+		  const status = await git.status();
+		  if (status.files.length === 0) {
+			new Notice("Nothing to commit.");
+			return;
+		  }
+
+		  await git.add(".");
+		  const { stdout: commitOutput } = await git.commit("Update project files");
+		  const repoURL = new URL(project.repo);
+		  const repoName = repoURL.pathname.split("/").pop();
+		  const ownerName = repoURL.pathname.split("/")[1];
+		  await git.push("origin", `HEAD:refs/heads/master`);
+
+		  new Notice(`Changes pushed to ${ownerName}/${repoName}`);
+		} catch (err) {
+		  new Notice(`Error pushing changes: ${err.message}`);
+		}
+	  }
+
+   async onunload(): void {
+    // Push changes to GitHub for each project
+    for (const project of this.projects) {
+      this.pushChangesToGitHub(project);
+    }
   }
 
   async loadProjects() {
