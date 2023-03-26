@@ -1,0 +1,1 @@
+export const GITHUB_TOKEN = "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";

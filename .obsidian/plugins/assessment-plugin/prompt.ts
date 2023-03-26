@@ -26,6 +26,7 @@ import { RestEndpointMethods } from "@octokit/plugin-rest-endpoint-methods";
 import { QuickAdd, TemplateSuggester } from "obsidian-quickadd";
 const path = require("path");
 const matter = require('gray-matter');
+require('dotenv').config();
 
 export async function promptForProjectInfo(): Promise<{
     name: string;

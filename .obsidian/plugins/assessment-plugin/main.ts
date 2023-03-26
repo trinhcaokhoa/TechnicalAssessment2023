@@ -27,8 +27,7 @@ import { QuickAdd, TemplateSuggester } from "obsidian-quickadd";
 const path = require("path");
 const matter = require('gray-matter');
 import { promptForMilestone, promptForProjectInfo, promptForTask, createNewProject} from "prompt.ts";
-import dotenv from 'dotenv';
-dotenv.config();
+import { GITHUB_TOKEN } from "config.ts";
 
 // interface ProjectManSettings {
 // 	ProjectRepos: {},
@@ -37,6 +36,8 @@ dotenv.config();
 // const DEFAULT_SETTINGS: ProjectManSettings = {
 // 	ProjectRepos: {},
 // }
+
+
 
 interface Project {
   name: string;
@@ -115,9 +116,9 @@ this.addCommand({
     await git.cwd(projectFolder);
 
     const octokit = new Octokit({
-      auth: process.env.GITHUB_TOKEN,
+      auth: GITHUB_TOKEN,
     });
-
+	console.log(octokit);
     try {
       const { data: newMilestone } = await octokit.issues.createMilestone({
         owner: ownerName,
@@ -128,6 +129,12 @@ this.addCommand({
       });
       new Notice(`Milestone '${newMilestone.title}' created.`);
     } catch (err) {
+    	console.log(repoURL);
+    	console.log(repoName);
+    	console.log(ownerName);
+    	console.log(process.env.GITHUB_TOKEN);
+    	console.log(newMilestone);
+
       new Notice(`Error creating milestone: ${err.message}`);
     }
   },
@@ -262,7 +269,7 @@ this.addCommand({
     try {
       // Get a list of milestones for the repository
       const octokit = new Octokit({
-      auth: process.env.GITHUB_TOKEN,
+      auth: GITHUB_TOKEN,
     });
       const { data: milestones } = await octokit.issues.listMilestones({
         owner: ownerName,

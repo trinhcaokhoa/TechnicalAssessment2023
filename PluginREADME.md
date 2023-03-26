@@ -20,10 +20,10 @@ To run the ProjectMan plugin locally in Obsidian, follow these steps:
 
 ## Create environment variable
 1. Open a text editor such as Notepad, Sublime Text, or Visual Studio Code.
-2. Create a new file and save it as .env in the root directory of your ProjectMan plugin.
-3. In the .env file, add the following line: GITHUB_TOKEN=your_token_here
+2. Create a new file and save it as config.ts in the directory of your ProjectMan plugin.
+3. In the config.ts file, add the following line: GITHUB_TOKEN=your_token_here
 4. Replace your_token_here with your GitHub personal access token.
-5. Save the .env file.
+5. Save the config.ts file.
 
 ## Usage
 
