@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "3a487cd013a5ff39",
+    "type": "split",
+    "children": [
+      {
+        "id": "4964972d327f5872",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c84cc6006f5089ac",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d8b1364da7a0d7db",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d6d84f054c1ea03",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21f86934b4eaf4b1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ecd487059d63f308",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "eaf3b768b41ba91f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "1eef38c5b0f7b6f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "21c1e25f0ff6c2e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3fa7909da0a6fe67",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ff5c905fac0a598f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b04ca05b40058333",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "498bc2f6039a21b1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c84cc6006f5089ac",
+  "lastOpenFiles": [
+    "Projects/Mebook/MebookDashBoard.md",
+    "Projects/infor657/wiki",
+    "Projects/infor657/tasks",
+    "Projects/infor657/infor657DashBoard.md",
+    "Projects/infor657/test.py",
+    "Projects/infor657/project.pdf",
+    "Projects/infor657/inforDashBoard.md",
+    "Projects/infor657/infor4DashBoard.md",
+    "Projects/infor657/client3_result.txt",
+    "Projects/infor657/client2_result.txt",
+    "Projects/infor657/client1_result.txt",
+    "Projects/infor657/UDP_Server_Project.py",
+    "Projects/infor657/README.md",
+    "Projects/infor657/Client_3_project.py",
+    "Projects/infor657/Client_2-project.py",
+    "Projects/infor/inforDashBoard.md",
+    "Projects/infor/infor4DashBoard.md",
+    "Projects/infor/README.md",
+    "Projects/Mebook/README.md",
+    "Projects/Mebook/static/admin/js/vendor/select2/LICENSE.md",
+    "Projects/Mebook/static/admin/css/vendor/select2/LICENSE-SELECT2.md",
+    "Projects/Mebook/static/rest_framework/docs/img/grid.png",
+    "Projects/Mebook/static/admin/img/gis/move_vertex_on.svg",
+    "Projects/Mebook/static/admin/img/gis/move_vertex_off.svg",
+    "Projects/Mebook/static/star-ratings/images/stars.png",
+    "Projects/Mebook/static/star-ratings/images/admin_stars.png",
+    "Projects/Mebook/static/rest_framework/img/grid.png",
+    "Projects/Mebook/static/rest_framework/img/glyphicons-halflings.png",
+    "Projects/Mebook/static/rest_framework/img/glyphicons-halflings-white.png",
+    "Projects/Mebook/static/rest_framework/fonts/glyphicons-halflings-regular.svg",
+    "Projects/Mebook/static/rest_framework/fonts/fontawesome-webfont.svg",
+    "TaskBreakDown_Plan.md",
+    "PluginREADME.md",
+    "Projects/infor5/infor5DashBoard.md",
+    "Projects/infor5/inforDashBoard.md",
+    "Projects/infor5/infor4DashBoard.md",
+    "Projects/infor5/README.md",
+    "Projects/infor4/infor4DashBoard.md",
+    "node_modules/prettier/README.md",
+    "node_modules/dotenv/README.md",
+    "node_modules/dotenv/CHANGELOG.md",
+    "Projects/infor4/inforDashBoard.md",
+    "Projects/infor4/README.md",
+    "Projects/mebook/mebookDashBoard.md",
+    "Projects/agfqf/agfqfDashBoard.md"
+  ]
+}

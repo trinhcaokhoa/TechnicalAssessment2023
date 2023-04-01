@@ -2,3 +2,7 @@ task_01/*
 task_02/*
 task_03/*
 downloads
+idea/*
+node_modules
+template/
+config.ts
